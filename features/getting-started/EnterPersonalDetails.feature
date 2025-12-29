@@ -16,3 +16,26 @@ Feature: Enter my Personal details
 
     Background:
         Given user is on the enrollment page
+
+    @sep10-1
+    Scenario: The system should display default field type and value for First Name and Last name fields
+        Then the first name field should have default value as First Name
+        And the last name field should have default value as Last Name
+
+    @sep10-2
+    Scenario: Verify system  does not accept emails in incorrect format
+        When user enters the first name
+        And user enters lastname
+        And user enters invalid email address
+        And user enters phone number
+        And user clicks the next button on Start Application Step
+        Then user stays on the Start Application step
+        And the start application stepper circle color should be blue
+
+    @sep10-3
+    Scenario: Verify phone field doesn't accept letters
+        When user invalid data in the phone field
+        And user clicks the next button on Start Application Step
+        Then user stays on the Start Application step
+        And the start application stepper circle color should be blue
+

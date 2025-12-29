@@ -29,5 +29,11 @@
         "allowCoupons": true,
         "couponDiscount": 50
       }
-    ]
+    ],
+    "personalDetails": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "phoneNumber": "123456789"
+    }
   }

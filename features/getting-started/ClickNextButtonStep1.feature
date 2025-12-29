@@ -26,3 +26,13 @@ Feature: Click on the next button on step 1
         And the payment plan stepper circle color should be blue
 
 
+    @sep19-2
+    Scenario: Clicking next button after providing only the required personal details will take the user to the payment plan step
+        When user enters the first name
+        And user enters lastname
+        And user enters email address
+        And user enters phone number
+        And user clicks the next button on Start Application Step
+        Then user will land on the Payment plan step
+        And the start application stepper circle color should be green
+        And the payment plan stepper circle color should be blue

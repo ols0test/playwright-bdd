@@ -18,7 +18,7 @@ Feature: Enter my Personal details
         Given user is on the enrollment page
 
     @sep10-1
-    Scenario: The system should dispay default field type and value for First Name and Last name fields
+    Scenario: The system should display default field type and value for First Name and Last name fields
         Then the first name field should have default value as First Name
         And the last name field should have default value as Last Name
 

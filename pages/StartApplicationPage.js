@@ -27,9 +27,13 @@ export class StartApplicationPage extends BasePage {
       "//input[@formcontrolname='firstName']"
     );
 
+    this.firstNamedefaultValue = page.getByText('First Name')
+
     this.lastNameInputBox = page.locator(
       "//input[@formcontrolname='lastName']"
     );
+
+    this.lastNamedefaultValue = page.getByText('Last Name')
 
     this.emailInputBox = page.locator("//input[@formcontrolname='email']");
 

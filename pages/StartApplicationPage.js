@@ -112,7 +112,7 @@ export class StartApplicationPage extends BasePage {
     );
 
     this.footer = page.locator(
-      "//p[@class = 'footer-text' and contains(text(), 'Need help?')]"
+      "(//p[@class='footer-text' and contains(normalize-space(.),'Need help? Contact us at enrollment@cydeo.com')])[1]"
     );
 
     this.nextButton = page.locator(

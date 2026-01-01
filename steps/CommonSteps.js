@@ -20,6 +20,6 @@ Given("user is on payment plan page", async function () {
   await startApplicationPage.enterLastName("Doe");
   await startApplicationPage.enterEmail("johndoe@example.com");
   await startApplicationPage.enterPhoneNumber("1234567890");
-  await startApplicationPage.selectHowDidYouHearAboutUs("Social media");
+  await startApplicationPage.selectHowDidYouHearAboutUs("email");
   await startApplicationPage.clickNextButton();
 })

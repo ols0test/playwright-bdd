@@ -24,7 +24,7 @@ Feature: View payment plan options in Step 2   #! test only
         Given user is on payment plan page
 
     @sep17-1
-    Scenario: The system should display only one upfront price.
+    Scenario: The system should display upfront plan correctly.
         Then the text for upfront payment should be Upfront for the first line
         And the text for upfront payment should be 400 pay once for the second row
 

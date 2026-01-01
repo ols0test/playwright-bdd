@@ -52,6 +52,7 @@ class Price {
  * @property {string} externalUrl
  * @property {string} terms
  * @property {PriceData[]} prices
+ * @property {Object} personalDetails
  */
 class Product {
   /** @type {Price[]} */
@@ -73,7 +74,8 @@ class Product {
     refundDate,
     externalUrl,
     terms,
-    prices
+    prices,
+    personalDetails
   }) {
     this.available = available;
     this.productName = productName;
@@ -88,6 +90,7 @@ class Product {
     this.externalUrl = externalUrl;
     this.terms = terms;
     this.prices = prices.map(price => new Price(price));
+    this.personalDetails = personalDetails;
   }
 }
 

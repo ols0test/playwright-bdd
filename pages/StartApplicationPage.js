@@ -27,9 +27,13 @@ export class StartApplicationPage extends BasePage {
       "//input[@formcontrolname='firstName']"
     );
 
+    this.firstNamedefaultValue = page.getByText('First Name')
+
     this.lastNameInputBox = page.locator(
       "//input[@formcontrolname='lastName']"
     );
+
+    this.lastNamedefaultValue = page.getByText('Last Name')
 
     this.emailInputBox = page.locator("//input[@formcontrolname='email']");
 
@@ -108,7 +112,7 @@ export class StartApplicationPage extends BasePage {
     );
 
     this.footer = page.locator(
-      "//p[@class = 'footer-text' and contains(text(), 'Need help?')]"
+      "(//p[@class='footer-text' and contains(normalize-space(.),'Need help? Contact us at enrollment@cydeo.com')])[1]"
     );
 
     this.nextButton = page.locator(
@@ -125,6 +129,7 @@ export class StartApplicationPage extends BasePage {
 
     this.originalPrice = page.locator("//s[contains(.,'$')]");
 
+    this.refundPolicytext = page.locator("//div[@class='row ng-star-inserted']/div[@class='col-sm info']");
     
   }
 

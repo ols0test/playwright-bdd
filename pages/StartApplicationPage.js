@@ -129,6 +129,7 @@ export class StartApplicationPage extends BasePage {
 
     this.originalPrice = page.locator("//s[contains(.,'$')]");
 
+    this.refundPolicytext = page.locator("//div[@class='row ng-star-inserted']/div[@class='col-sm info']");
     
   }
 

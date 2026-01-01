@@ -11,6 +11,8 @@ export class PaymentPlanPage extends BasePage {
       "//*[text()='Choose a payment plan']"
     );
 
+    this.paymentPlanButtons = page.locator("//mat-expansion-panel-header[@role='button']")
+    
     this.upfrontPaymentOption = page.locator(
       "//span[@class='payment-type'][contains(text(),'Upfront')]"
     );

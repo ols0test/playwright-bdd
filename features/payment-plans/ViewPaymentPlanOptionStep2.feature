@@ -20,9 +20,22 @@ Feature: View payment plan options in Step 2   #! test only
 
 
 
-    #TODO: Create scenarios that cover all the acceptance criteria
+    Background:
+        Given user is on payment plan page
 
+    @sep17-1
+    Scenario: The system should display upfront plan correctly.
+        Then the text for upfront payment should be Upfront for the first line
+        And the text for upfront payment should be 400 pay once for the second row
 
+    @sep17-2
+    Scenario: The system should display installment plan correctly.
+        Then the text for upfront payment should be 5 Installments for the first row
+        And the text for upfront payment should be 100 per month for the second row
+    
+    @sep17-3
+    Scenario: The system should show only 2 payments plans.
+        Then there should be only two payment plans displayed
 
 
 

@@ -12,24 +12,42 @@ Feature: Click on the next button on payment plans page   #! Test Only
     #* AC7: By default, the pay button should be displayed.
 
     Background:
-        Given user is on the enrollment page
-        And user has completed Step 1 with valid information
-        And user navigates to Step 2 Payment Plans
+        Given user is on payment plan page
 
 
-    #TODO: Create scenarios that cover all the acceptance criteria
+    @sep16-1
+    Scenario: The next button should be enabled when plan is selected
+        When user selects a payment plan
+        Then the next button should be enabled
 
-    Scenario: Verify that the next button is disabled by default
-        Then the Next button will be disabled by default
+    @sep16-2
+    Scenario: Clicking next button after selecting a plan will take the user to the Step 3 Review page
+        When user selects a payment plan
+        And user clicks the next button on Payment Plan page
+        Then the Review page should be displayed
 
-    Scenario: Verify that the next button is enabled when user selects upfront payment plan
-        When user clicks on Upfront payment Option
-        Then the Next button will be enabled
+    @sep16-3
+    Scenario: Clicking next button after selecting a plan will take the user to the Step 3 Review page
+        When user selects a payment plan
+        And user clicks the next button on Payment Plan page
+        Then the start application stepper circle color should be green
+        And the payment plan stepper circle color should be green
+        And the review stepper circle color should be blue
 
-    Scenario: Verify that the next button is enabled when user selects installment payment plan
-        When user clicks on Installment payment Option
-        Then the Next button will be enabled
+    @sep16-4
+    Scenario:Payment component for Upfront should be displayed on Step 3 Review page
+        When user selects an Upfront payment plan
+        And user clicks the next button on Payment Plan page
+        Then the Upfront payment component should be displayed on Review page
 
-    #TODO: Create scenarios that cover all the acceptance criteria
+    @sep16-5
+    Scenario:Payment component should be displayed on Step 3 Review page
+        When user selects a 5 Installments payment plan
+        And user clicks the next button on Payment Plan page
+        Then the 5 Installments payment component should be displayed on Review page
+
+    @sep16-6
+    Scenario: The back button should be displayed
+        Then the back button should be displayed
 
 

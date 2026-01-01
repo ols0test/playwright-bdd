@@ -11,6 +11,8 @@ export class PaymentPlanPage extends BasePage {
       "//*[text()='Choose a payment plan']"
     );
 
+    this.paymentPlanButtons = page.locator("//mat-expansion-panel-header[@role='button']")
+    
     this.upfrontPaymentOption = page.locator(
       "//span[@class='payment-type'][contains(text(),'Upfront')]"
     );
@@ -141,7 +143,7 @@ export class PaymentPlanPage extends BasePage {
       "(//button[contains(text(), 'I have a promo code')])[2]"
     );
 
-    this.inactiveNextButton = page.locator("//button[text()='Next']");
+    this.inactiveNextButton = page.locator("//button[@class='next-button disabledButton']");
 
     this.activeNextButton = page.locator(
       "//button[@class = 'next-button' and text()='Next']"

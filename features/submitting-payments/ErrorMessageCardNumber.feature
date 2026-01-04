@@ -15,7 +15,7 @@ Feature: Error message for the invalid card number
         And user already completed the payment plan page
 
     @sep25-1
-    Scenario: Verify that the error message is dispayed when the entered card number is invalid
+    Scenario: Verify that the error message is displayed when the entered card number is invalid
         When user enters wrong card number
         And user clicks on Terms and Conditions checkbox
         Then the card error message "Your card number is invalid." is displayed

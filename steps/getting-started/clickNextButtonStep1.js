@@ -3,21 +3,22 @@ import { expect} from "@playwright/test";
 import { startApplicationPage, page } from "../../globalPagesSetup.js";
 import { paymentPlanPage} from "../../globalPagesSetup.js";
 import { productInfo } from "../../utilities/qa-data-reader.js";
+import {faker} from "@faker-js/faker";
 
 When('user enters the first name', async function () {
-    await startApplicationPage.enterFirstName(productInfo.personalDetails.firstName);
+    await startApplicationPage.enterFirstName(faker.person.firstName());
 });
 
 When('user enters lastname', async function () {
-    await startApplicationPage.enterLastName(productInfo.personalDetails.lastName);
+    await startApplicationPage.enterLastName(faker.person.lastName());
 });
 
 When('user enters email address', async function () {
-    await startApplicationPage.enterEmail(productInfo.personalDetails.email);
+    await startApplicationPage.enterEmail(faker.internet.email());
 });
 
 When('user enters phone number', async function () {
-    await startApplicationPage.enterPhoneNumber(productInfo.personalDetails.phoneNumber);
+    await startApplicationPage.enterPhoneNumber(faker.phone.number(10));
 });
 
 When('user select from How did you hear about us?', async function () {

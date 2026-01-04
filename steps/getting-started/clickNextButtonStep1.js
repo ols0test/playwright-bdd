@@ -18,7 +18,7 @@ When('user enters email address', async function () {
 });
 
 When('user enters phone number', async function () {
-    await startApplicationPage.enterPhoneNumber(faker.phone.number(10));
+    await startApplicationPage.enterPhoneNumber(faker.string.numeric(10));
 });
 
 When('user select from How did you hear about us?', async function () {

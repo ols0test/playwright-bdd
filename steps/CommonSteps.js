@@ -7,7 +7,6 @@ import {
   reviewPaymentPage,
   page,
 } from "../globalPagesSetup.js";
-import { productInfo } from "../../utilities/qa-data-reader.js";
 import {faker} from "@faker-js/faker";
 
 Given("user is on the enrollment page", async function () {

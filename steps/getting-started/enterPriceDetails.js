@@ -16,7 +16,7 @@ Then("the last name field should have default value as Last Name", async functio
 });
 
 When("user enters invalid email address", async function () {
-   await startApplicationPage.enterEmail("invalid_email@example.com"); 
+   await startApplicationPage.enterEmail("invalid_email"); 
 })
 
 Then("user stays on the Start Application step", async function () {

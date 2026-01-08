@@ -34,7 +34,7 @@ Feature: Enter my Personal details
 
     @sep10-3
     Scenario: Verify phone field doesn't accept letters
-        When user invalid data in the phone field
+        When user enters invalid data in the phone field
         And user clicks the next button on Start Application Step
         Then user stays on the Start Application step
         And the start application stepper circle color should be blue

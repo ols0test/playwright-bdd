@@ -21,7 +21,7 @@ When('user enters phone number', async function () {
     await startApplicationPage.enterPhoneNumber(faker.string.numeric(10));
 });
 
-When('user select from How did you hear about us?', async function () {
+When('user selects from How did you hear about us?', async function () {
     await startApplicationPage.selectHowDidYouHearAboutUs("Google");
 });
 

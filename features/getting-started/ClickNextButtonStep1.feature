@@ -19,7 +19,7 @@ Feature: Click on the next button on step 1
         And user enters lastname
         And user enters email address
         And user enters phone number
-        And user select from How did you hear about us?
+        And user selects from How did you hear about us?
         And user clicks the next button on Start Application Step
         Then user will land on the Payment plan step
         And the start application stepper circle color should be green

@@ -29,6 +29,6 @@ Then("the start application stepper circle color should be blue", async function
     await expect(startApplicationPage.startApplicationStepCircle).toHaveCSS("background-color", "rgb(1, 201, 255)");
 })
 
-When("user invalid data in the phone field", async function () {
+When("user enters invalid data in the phone field", async function () {
     await startApplicationPage.enterPhoneNumber("abcer");
 });  
